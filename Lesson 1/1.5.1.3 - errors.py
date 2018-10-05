@@ -1,0 +1,7 @@
+# print(3/0)
+# print(2 + 3.6.7)
+# print(1?2)
+# print(3+a)
+# print(5--8)
+# print(3**2)
+print(2**3)

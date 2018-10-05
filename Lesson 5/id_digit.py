@@ -1,26 +1,22 @@
-def string_to_list(string):
-    digits = []
-    for ch in string:
-        digits += [int(ch)]
-    return digits
-
-
 def control_digit(ID):
-    digits = string_to_list(ID)
+    s = 0
     for i in range(8):
-        if i % 2 == 1:
-            temp = digits[i] * 2
-            if temp < 10:
-                digits[i] = temp
+        digit = int(ID[i])
+        if i%2 == 0: #i is one of 0,2,4,6
+            s = s+digit
+        else: #i is one of 1,3,5,7
+            digit = digit * 2
+            if digit <= 9:
+                s = s+digit
             else:
-                digits[i] = 1 + (temp % 10)
+                ones = digit%10
+                tens = 1 #digit is either 10, 12, 14, 16, or 18
+                s = s + tens + ones
 
-    total = sum(digits)
-    if total % 10 == 0:
-        check_digit = 0
-    else:
-        check_digit = 10 - (total % 10)
-    return str(check_digit)
+    ones = s%10
+    check_digit = 10 - ones
 
+##    if check_digit == 10:
+##        check_digit = 0
 
-print(control_digit("12345678"))
+    return check_digit
