@@ -12,4 +12,4 @@ lst = [4,8,3,1]
 # my_lst[0] = 7
 # print(my_lst)
 # my_str[0] = "H"
-#print(sum([1,2,3,4]))
+print(sum([1,2,3,4]))

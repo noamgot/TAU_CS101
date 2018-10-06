@@ -20,4 +20,4 @@ lst4 = []
 # print(lst3[2])
 # i = 3
 # print(lst3[i])
-#print(lst3[4])
+print(lst3[4])
