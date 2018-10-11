@@ -1,6 +1,5 @@
 import time
 
-
 def f1(n):
     s = 0
     for i in range(n):
