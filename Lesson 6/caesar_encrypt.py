@@ -11,7 +11,6 @@ def caesar_encrypt(plaintext, offset):
         else:
             ciphertext = ciphertext + char
             #print(char, "unchanged")
-
     return ciphertext
 
 
